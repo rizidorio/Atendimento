@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7747FC11-98AE-4CED-B408-53FB3519EC19}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>UI</RootNamespace>
+    <AssemblyName>UI</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BuscarCep.cs" />
+    <Compile Include="CustomProfessionalColors.cs" />
+    <Compile Include="Endereco.cs" />
+    <Compile Include="Views\Clientes\frmConsultarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Clientes\frmConsultarCliente.Designer.cs">
+      <DependentUpon>frmConsultarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Cursos\frmCadastrarCursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Cursos\frmCadastrarCursos.Designer.cs">
+      <DependentUpon>frmCadastrarCursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Cursos\frmConsultarCursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Cursos\frmConsultarCursos.Designer.cs">
+      <DependentUpon>frmConsultarCursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Fornecedores\frmCadastrarFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Fornecedores\frmCadastrarFornecedor.Designer.cs">
+      <DependentUpon>frmCadastrarFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Clientes\frmCadastrarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Clientes\frmCadastrarCliente.Designer.cs">
+      <DependentUpon>frmCadastrarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Procedimentos\frmCadastrarProcedimento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Procedimentos\frmCadastrarProcedimento.Designer.cs">
+      <DependentUpon>frmCadastrarProcedimento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Procedimentos\frmConsultarProcedimento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Procedimentos\frmConsultarProcedimento.Designer.cs">
+      <DependentUpon>frmConsultarProcedimento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Produtos\frmCadastrarProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Produtos\frmCadastrarProduto.Designer.cs">
+      <DependentUpon>frmCadastrarProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Clientes\frmClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Clientes\frmClientes.Designer.cs">
+      <DependentUpon>frmClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Fornecedores\frmConsultarFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Fornecedores\frmConsultarFornecedor.Designer.cs">
+      <DependentUpon>frmConsultarFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Cursos\frmCursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Cursos\frmCursos.Designer.cs">
+      <DependentUpon>frmCursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Fornecedores\frmFornecedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Fornecedores\frmFornecedores.Designer.cs">
+      <DependentUpon>frmFornecedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Grupos\frmGrupoCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Grupos\frmGrupoCurso.Designer.cs">
+      <DependentUpon>frmGrupoCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Grupos\frmGrupoProcedimento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Grupos\frmGrupoProcedimento.Designer.cs">
+      <DependentUpon>frmGrupoProcedimento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Grupos\frmGrupoProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Grupos\frmGrupoProduto.Designer.cs">
+      <DependentUpon>frmGrupoProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInicio.Designer.cs">
+      <DependentUpon>frmInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Procedimentos\frmProcedimentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Procedimentos\frmProcedimentos.Designer.cs">
+      <DependentUpon>frmProcedimentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Produtos\frmConsultarProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Produtos\frmConsultarProdutos.Designer.cs">
+      <DependentUpon>frmConsultarProdutos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Produtos\frmProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Produtos\frmProdutos.Designer.cs">
+      <DependentUpon>frmProdutos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Grupos\frmUnidadeMedida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Grupos\frmUnidadeMedida.Designer.cs">
+      <DependentUpon>frmUnidadeMedida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TratamentoCampos.cs" />
+    <Compile Include="Validacoes.cs" />
+    <EmbeddedResource Include="Views\Clientes\frmConsultarCliente.resx">
+      <DependentUpon>frmConsultarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Cursos\frmCadastrarCursos.resx">
+      <DependentUpon>frmCadastrarCursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Cursos\frmConsultarCursos.resx">
+      <DependentUpon>frmConsultarCursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Fornecedores\frmCadastrarFornecedor.resx">
+      <DependentUpon>frmCadastrarFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Clientes\frmCadastrarCliente.resx">
+      <DependentUpon>frmCadastrarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Procedimentos\frmCadastrarProcedimento.resx">
+      <DependentUpon>frmCadastrarProcedimento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Procedimentos\frmConsultarProcedimento.resx">
+      <DependentUpon>frmConsultarProcedimento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Produtos\frmCadastrarProduto.resx">
+      <DependentUpon>frmCadastrarProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Clientes\frmClientes.resx">
+      <DependentUpon>frmClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Fornecedores\frmConsultarFornecedor.resx">
+      <DependentUpon>frmConsultarFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Cursos\frmCursos.resx">
+      <DependentUpon>frmCursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Fornecedores\frmFornecedores.resx">
+      <DependentUpon>frmFornecedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Grupos\frmGrupoCurso.resx">
+      <DependentUpon>frmGrupoCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Grupos\frmGrupoProcedimento.resx">
+      <DependentUpon>frmGrupoProcedimento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Grupos\frmGrupoProduto.resx">
+      <DependentUpon>frmGrupoProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInicio.resx">
+      <DependentUpon>frmInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Procedimentos\frmProcedimentos.resx">
+      <DependentUpon>frmProcedimentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Produtos\frmConsultarProdutos.resx">
+      <DependentUpon>frmConsultarProdutos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Produtos\frmProdutos.resx">
+      <DependentUpon>frmProdutos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Grupos\frmUnidadeMedida.resx">
+      <DependentUpon>frmUnidadeMedida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\DAO.atendimentosDataContext.datasource" />
+    <None Include="Properties\DataSources\DAO.cliente.datasource" />
+    <None Include="Properties\DataSources\DAO.curso.datasource" />
+    <None Include="Properties\DataSources\DAO.DataContextFactory.datasource" />
+    <None Include="Properties\DataSources\DAO.empresa.datasource" />
+    <None Include="Properties\DataSources\DAO.fornecedor.datasource" />
+    <None Include="Properties\DataSources\DAO.grupo_curso.datasource" />
+    <None Include="Properties\DataSources\DAO.grupo_procedimento.datasource" />
+    <None Include="Properties\DataSources\DAO.grupo_produto.datasource" />
+    <None Include="Properties\DataSources\DAO.procedimento.datasource" />
+    <None Include="Properties\DataSources\DAO.produto.datasource" />
+    <None Include="Properties\DataSources\DAO.unidade_medida.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Novopq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alterarpq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Excluirpq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\procurarpq2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fecharpq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salvarpq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Limpar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAO.csproj">
+      <Project>{f4192bf8-3a28-44a4-bd7f-143f76942a47}</Project>
+      <Name>DAO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fechar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salvar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vassoura64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fechar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NovoCliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sair24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sair32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sair64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apagar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\procurar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\voltar32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adicionar64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excluir64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditarProd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RemoverProd.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

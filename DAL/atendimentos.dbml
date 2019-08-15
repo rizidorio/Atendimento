@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="db_atendimentos" Class="atendimentosDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=USUARIO-PC\SQLEXPRESS;Initial Catalog=db_atendimentos;Integrated Security=True" SettingsObjectName="DAO.Properties.Settings" SettingsPropertyName="db_atendimentosConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tb_cliente" Member="cliente">
+    <Type Name="cliente">
+      <Column Name="id_cliente" Member="codigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nome_cliente" Member="nome" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="tipo_cliente" Member="tipo" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="cpf_cnpj" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="rg_ie" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="data_nascimento" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="estado_civil" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="sexo" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="cep" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="logradouro" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="numero" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="complemento" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="bairro" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="cidade" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="estado" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="ddd" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="telefone" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="celular" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="data_cadastro" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="ativo" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_unidade_medida" Member="unidade_medida">
+    <Type Name="unidade_medida">
+      <Column Name="id_unidade_medida" Member="codigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nome_unidade_medida" Member="nome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ativo" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="unidade_medida_produto" Member="produto" ThisKey="codigo" OtherKey="unidade_medida" Type="produto" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_curso" Member="curso">
+    <Type Name="curso">
+      <Column Name="id_curso" Member="codigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nome_curso" Member="nome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="descricao_curso" Member="descricao" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="investimento" Type="System.Decimal" DbType="Decimal(8,2) NOT NULL" CanBeNull="false" />
+      <Column Name="carga_horaria" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="id_grupo_curso" Member="grupo_curso" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ativo" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="grupo_curso_curso" Member="grupo_curso1" ThisKey="grupo_curso" OtherKey="codigo" Type="grupo_curso" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_empresa" Member="empresa">
+    <Type Name="empresa">
+      <Column Name="id_empresa" Member="codigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nome_empresa" Member="nome" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="cnpj_cpf" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="ie_rg" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="cep" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="logradouro" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="numero" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="complemento" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="bairro" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="cidade" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="estado" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="ddd" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="telefone" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="celular" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="pagina_web" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="data_cadastro" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="ativo" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_grupo_curso" Member="grupo_curso">
+    <Type Name="grupo_curso">
+      <Column Name="id_grupo_curso" Member="codigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nome_grupo_curso" Member="nome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ativo" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="grupo_curso_curso" Member="curso" ThisKey="codigo" OtherKey="grupo_curso" Type="curso" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_grupo_procedimento" Member="grupo_procedimento">
+    <Type Name="grupo_procedimento">
+      <Column Name="id_grupo_procedimento" Member="codigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nome_grupo_procedimento" Member="nome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ativo" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="grupo_procedimento_procedimento" Member="procedimento" ThisKey="codigo" OtherKey="grupo_procedimento" Type="procedimento" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_grupo_produto" Member="grupo_produto">
+    <Type Name="grupo_produto">
+      <Column Name="id_grupo_produto" Member="codigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nome_grupo_produto" Member="nome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ativo" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="grupo_produto_produto" Member="produto" ThisKey="codigo" OtherKey="grupo_produto" Type="produto" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_procedimento" Member="procedimento">
+    <Type Name="procedimento">
+      <Column Name="id_procedimento" Member="codigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nome_procedimento" Member="nome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="descricao" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="valor" Type="System.Decimal" DbType="Decimal(8,2) NOT NULL" CanBeNull="false" />
+      <Column Name="id_grupo_procedimento" Member="grupo_procedimento" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ativo" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="grupo_procedimento_procedimento" Member="grupo_procedimento1" ThisKey="grupo_procedimento" OtherKey="codigo" Type="grupo_procedimento" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_produto" Member="produto">
+    <Type Name="produto">
+      <Column Name="id_produto" Member="codigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nome_produto" Member="nome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="descricao" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="id_unidade_medida" Member="unidade_medida" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_grupo_produto" Member="grupo_produto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_fornecedor" Member="fornecedor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="valor_compra" Type="System.Decimal" DbType="Decimal(8,2) NOT NULL" CanBeNull="false" />
+      <Column Name="margem_lucro" Type="System.Decimal" DbType="Decimal(5,2) NOT NULL" CanBeNull="false" />
+      <Column Name="valor_venda" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="data_cadastro" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="ativo" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="grupo_produto_produto" Member="grupo_produto1" ThisKey="grupo_produto" OtherKey="codigo" Type="grupo_produto" IsForeignKey="true" />
+      <Association Name="unidade_medida_produto" Member="unidade_medida1" ThisKey="unidade_medida" OtherKey="codigo" Type="unidade_medida" IsForeignKey="true" />
+      <Association Name="fornecedor_produto" Member="fornecedor1" ThisKey="fornecedor" OtherKey="codigo" Type="fornecedor" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_fornecedor" Member="fornecedor">
+    <Type Name="fornecedor">
+      <Column Name="id_fornecedor" Member="codigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="razao_social" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="nome_fantasia" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="tipo_fornecedor" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="cnpj_cpf" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="ie_rg" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="cep" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="logradouro" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="numero" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="complemento" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="bairro" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="cidade" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="estado" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="ddd" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="telefone" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="celular" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="pagina_web" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="nome_vendedor" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="ddd_vendedor" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="telefone_vendedor" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="celular_vendedor" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="email_vendedor" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="data_cadastro" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="ativo" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="fornecedor_produto" Member="produto" ThisKey="codigo" OtherKey="fornecedor" Type="produto" />
+    </Type>
+  </Table>
+</Database>

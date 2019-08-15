@@ -1,0 +1,10 @@
+C:\Users\Usuario\Source\Repos\Desktop\Atendimento\DAL\bin\Debug\DAL.dll.config
+C:\Users\Usuario\Source\Repos\Desktop\Atendimento\DAL\bin\Debug\DAL.dll
+C:\Users\Usuario\Source\Repos\Desktop\Atendimento\DAL\bin\Debug\DAL.pdb
+C:\Users\Usuario\Source\Repos\Desktop\Atendimento\DAL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Usuario\Source\Repos\Desktop\Atendimento\DAL\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Usuario\Source\Repos\Desktop\Atendimento\DAL\obj\Debug\DAO.csprojAssemblyReference.cache
+C:\Users\Usuario\Source\Repos\Desktop\Atendimento\DAL\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Source\Repos\Desktop\Atendimento\DAL\obj\Debug\DAO.csproj.CopyComplete
+C:\Users\Usuario\Source\Repos\Desktop\Atendimento\DAL\obj\Debug\DAL.dll
+C:\Users\Usuario\Source\Repos\Desktop\Atendimento\DAL\obj\Debug\DAL.pdb
